@@ -1,3 +1,4 @@
+package AulaLab3;
 public class Personagem {
 
   // variáveis de instância(instância é sinônimo de objeto)

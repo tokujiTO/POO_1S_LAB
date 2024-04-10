@@ -1,3 +1,4 @@
+package AulaLab3;
 import java.util.Random;
 
 public class JogoV2 {

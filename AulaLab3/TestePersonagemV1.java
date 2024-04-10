@@ -1,3 +1,4 @@
+package AulaLab3;
 public class TestePersonagemV1 {
     public static void main(String args []) {
       var p1 = new Personagem();
