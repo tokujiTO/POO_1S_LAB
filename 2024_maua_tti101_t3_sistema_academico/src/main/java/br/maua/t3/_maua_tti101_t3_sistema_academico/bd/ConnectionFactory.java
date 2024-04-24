@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author TiagoTokugi
  */
 public class ConnectionFactory {
-    private String host = "mysql-387re0124-tiagomassuda123-850a.b.aivencloud.com";
+    private String host = "mysql-387e0124-tiagomassuda123-850a.b.aivencloud.com";
     private String port = "23042";
     private String db = "defaultdb";
     private String user = "avnadmin";
@@ -32,10 +32,11 @@ public class ConnectionFactory {
         }
         
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Deu erro filho");
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "erro no connectionFactory!");
             return null;
         }
     
     }
-    
+
 }

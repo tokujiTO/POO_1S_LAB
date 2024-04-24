@@ -1,7 +1,9 @@
 br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela.class
 br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela$3.class
+br/maua/t3/_maua_tti101_t3_sistema_academico/bd/UsuarioDAO.class
+br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela$2.class
 br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela$1.class
 br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela$5.class
 br/maua/t3/_maua_tti101_t3_sistema_academico/App.class
 br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela$4.class
-br/maua/t3/_maua_tti101_t3_sistema_academico/tela/LoginTela$2.class
+br/maua/t3/_maua_tti101_t3_sistema_academico/modelo/Usuario.class

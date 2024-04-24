@@ -4,6 +4,8 @@
  */
 package br.maua.t3._maua_tti101_t3_sistema_academico.tela;
 
+import br.maua.t3._maua_tti101_t3_sistema_academico.bd.UsuarioDAO;
+import br.maua.t3._maua_tti101_t3_sistema_academico.modelo.Usuario;
 import javax.swing.JOptionPane;
 
 /**
@@ -113,21 +115,30 @@ public class LoginTela extends javax.swing.JFrame {
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-        //pegar o login digitado pelo usuário
+        try{
+            //pegar o login digitado pelo usuário
             var login = loginTextField.getText();
-            
+
             //Pegar a senha digitada pelo usuário 
             var senha = new String(senhaPasswordField.getPassword());
-            
+            var usuario = new Usuario();
+            usuario.setLogin(login);
+            usuario.setSenha(senha);
+            var dao = new UsuarioDAO();
             //Verificar se ambos são iguais a admin
-            if (login.equals("admin") && senha.equals("admin")){
-                //Se for o caso dar boas vindas
-                JOptionPane.showMessageDialog(null, "Seja bem vindo!");
+            if (dao.existe(usuario)){
+                //Se for o caso, dar boas vindas
+                JOptionPane.showMessageDialog(null, "bem vindo!");
             }
             else{
                 //Caso contrário, dizer par usuário e senha
                 JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
             }    //pegar o login digitado pelo usuário
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Falhou. Tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void criarContaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarContaButtonActionPerformed
