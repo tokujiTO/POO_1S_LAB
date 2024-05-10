@@ -1,16 +1,17 @@
-public class VetoresDinamicos {
-    private int[] elementos;
+//generics (jva5+)
+public class VetoresDinamicos <Tipo>{
+    private Tipo [] elementos;
     private int quantidade;
     private int capacidade;
 
     // construtor
     VetoresDinamicos() { // Executa qunado vc fala "new"
-        elementos = new int[4];
+        elementos = (Tipo[]) new Object[4];
         quantidade = 0;
         capacidade = elementos.length;
     }
 
-    public void adicionar(int e) {
+    public void adicionar(Tipo e) {
         if (estaCheio()) {
             // Uma hora, os elementos vão lotar, a gnt terá que usar uma nova array.
             redimencionar();
@@ -49,7 +50,7 @@ public class VetoresDinamicos {
         // dobrar a capacidade
         capacidade *= 2;
         // alocar um vetor de ints chamado aux com essa nova capacidade
-        var aux = new int[capacidade];
+        var aux = (Tipo[]) new Object[capacidade];
         // copiar todo mundo de elementos para aux
         for(int c = 0; c < quantidade; c++){
             aux[c] = elementos[c];
