@@ -129,6 +129,12 @@ public class LoginTela extends javax.swing.JFrame {
             if (dao.existe(usuario)){
                 //Se for o caso, dar boas vindas
                 JOptionPane.showMessageDialog(null, "bem vindo!");
+                // Construir um objeto dashBoardTela
+                var dt = new DashBoardTela();
+                // Tornar visivel a tela
+                dt.setVisible(true);
+                // Jogar fora a tela atual 
+                dispose();
             }
             else{
                 //Caso contrário, dizer par usuário e senha

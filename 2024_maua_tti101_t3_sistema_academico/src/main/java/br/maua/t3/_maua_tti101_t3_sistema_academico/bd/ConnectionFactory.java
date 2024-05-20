@@ -20,7 +20,7 @@ public class ConnectionFactory {
     private String password = "AVNS_Th71u61UU4O3AOhdubc";
     
     
-    public Connection obterConexão(){
+    public Connection obterConexao(){
         try{
             String stringConexao = String.format(
                 "jdbc:mysql://%s:%s/%s", host, port, db
